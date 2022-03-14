@@ -9,20 +9,20 @@
 }
 
 @font-face {
-	font-family: 'Montserrat Semibold';
-	src: url('../fonts/Montserrat-SemiBold.eot');
-	src: url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Montserrat-SemiBold.woff') format('woff'),
-		url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+	font-family: 'Montserrat Medium';
+	src: url('../fonts/Montserrat-Medium.eot');
+	src: url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Montserrat-Medium.woff') format('woff'),
+		url('../fonts/Montserrat-Medium.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'Montserrat Bold';
-	src: url('../fontsMontserrat-ExtraBold.eot');
-	src: url('../fontsMontserrat-ExtraBold.eot?#iefix') format('embedded-opentype'),
-		url('../fontsMontserrat-ExtraBold.woff') format('woff'),
-		url('../fontsMontserrat-ExtraBold.ttf') format('truetype');
+	src: url('../fonts/Montserrat-ExtraBold.eot');
+	src: url('../fonts/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Montserrat-ExtraBold.woff') format('woff'),
+		url('../fonts/Montserrat-ExtraBold.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -98,8 +98,12 @@ input[type="submit"]{
 }
 .title-1{
 	font-size: 36px;
-	line-height: 1.11;
+	line-height: 40px;
 	font-family: $mb;
+	@media(max-width:767px){
+		font-size: 22px;
+		line-height: 30px;
+	}
 }
 .title-2{
 	font-size: 30px;
