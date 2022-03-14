@@ -1,0 +1,151 @@
+.header-nav{
+	&>ul{
+		display: flex;
+		align-items: center;
+	}
+	&>ul>li{
+		padding-left: 20px;
+		padding-right: 25px;
+		width: fit-content;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		@media(max-width:1364px) {
+			padding-left: 15px;
+			padding-right: 20px;
+		}
+		
+	}
+	&>ul>li>a{
+		font-size: 16px;
+		text-transform: uppercase;
+		font-family: $mm;
+		color: #fff;
+		@media(max-width:1364px){
+			font-size: 13px;
+		}
+		
+	}
+	.drop-item{
+		position: relative;
+		display: flex;
+		align-items: center;
+		.drop-item__icon{
+			
+			i{color: #fff;
+			font-size: 12px;
+			margin-left: 10px;
+		}
+		}
+		
+	}
+	.drop-item ul{
+		display: none;
+		position: absolute;
+		z-index: 5;
+		left: 0;
+		bottom: 0;
+		padding-right: 20px;
+		min-width: 100%;
+		transform: translateY(100%);
+		background-color: #333333;
+		padding-left: 20px;
+		padding-bottom: 10px;
+		&>li a{
+			font-size: 14px;
+			line-height: 30px;
+			color: #fff;
+			white-space: nowrap;
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				bottom: -2px;
+				left: 0;
+				height: 1px;
+				background-color: rgba(255,255,255, .5);
+				width: 100%;
+				transition: .3s;
+			}
+			&:hover:after{width: 0;}
+
+
+		}
+	}
+	.drop-item:hover ul{
+		display: block;
+	}
+}
+/*========GAMBURGER======*/
+.menu-toggle {
+	display: none;
+	
+	z-index: 10;
+	cursor: pointer;
+}
+
+@media (max-width: 1199px) {
+	.menu-toggle {
+		display: block;
+		text-align: center;
+		position: relative;
+		width: 40px;
+		height: 35px;
+
+	}
+}
+
+.menu-toggle span {
+	position: absolute;
+	display: block;
+	width: 35px;
+	height: 3px;
+	background-color: #fff;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.menu-toggle span:after,
+.menu-toggle span:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	height: 3px;
+	background-color: #fff;
+
+	right: 0;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
+
+.menu-toggle span:after {
+	top: -8px;
+}
+
+.menu-toggle span:before {
+	bottom: -8px;
+}
+
+.menu-toggle.active span {
+	background-color: transparent;
+}
+
+.menu-toggle.active span:after {
+	top: 0px;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background-color: $yellow;
+}
+
+.menu-toggle.active span:before {
+	bottom: 0px;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	background-color: $yellow;
+}

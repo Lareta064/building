@@ -1,0 +1,104 @@
+.header{
+	padding-top: 25px;
+	padding-bottom: 12px;
+	background-color: #333333;
+	color: #fff;
+	@media(max-width:1199px){
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	&-logo{
+		margin-right: 10px;
+		img{
+			width: 150px;
+			
+			object-fit: contain;
+			@media(max-width:1199px) {
+				width: 116px;
+				
+			}
+
+		}
+	}
+	&-content{
+		display: flex;
+	}
+	&-location{
+		display: flex;
+		align-items: center;
+		color: #fff;
+		&__icon{margin-right: 10px;}
+	}
+	.header-wrapper__top{
+		display: grid;
+		grid-template-columns: 1.45fr .85fr .85fr .85fr;
+		column-gap: 16px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+		.header-location ,.header-address{margin-bottom: 8px;}
+	}
+	.header-location__city{
+		cursor:pointer;
+		border-bottom: 1px solid rgba(255, 255, 255, .5);
+		display: inline-block;
+		&:hover{
+			opacity: .5;
+		}
+	}
+	.text-12{color: #fff;}
+	.header-social p{
+		font-size: 14px;
+		margin-bottom: 15px;
+	}
+	.ya-share2__container_shape_round.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy) {
+		background-size: 26px 26px;
+		@media(max-width:1364px){
+			background-size: 20px 20px;
+		}
+	}
+	.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon {
+		height: 30px;
+		width: 30px;
+		background-size: 26px 26px;
+		@media(max-width:1364px){
+			height: 24px;
+			width: 24px;
+		}
+	}
+	.ya-share2__list.ya-share2__list_direction_horizontal>.ya-share2__item+.ya-share2__item {
+		margin-left: 10px;
+	}
+	&-button{
+		.btn:hover{
+			color: #fff;
+		}
+	}
+}
+.header-mobile-content{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.header-mobile-column{
+		display: flex;
+		align-items: center;
+		&>*+*{
+			margin-left: 25px;
+		}
+		.mobile-phone{
+			font-size: 22px;
+			color: $yellow;
+		}
+	}
+}
+.header-desktop{
+	display: block;
+	@media(max-width:1199px){
+		display: none;
+	}
+}
+.header-mobile{
+	display: none;
+	@media(max-width:1199px) {
+		display: block;
+	}
+}
