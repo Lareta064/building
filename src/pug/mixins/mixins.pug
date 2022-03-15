@@ -16,10 +16,32 @@ mixin header-menu(...arg)
 					li
 						a(href=""+ item.link) #{item.title}
 
-mixin benefit-item(title, iconSrc, iconWidth="100")
-	.info-item
-		.info-item__title !{title}
-		.info-item__icon
-			img(src="./img/"+ iconSrc +".png", width=""+ iconWidth  alt="alt")
-		if desk
-			.info-item__desk #{desk}
+mixin benefit-item(title, iconSrc, iconWidth="100", frameBtn)
+	if frameBtn
+		.info-item(frame-btn="benefit-desk")
+			.info-item__title !{title}
+			.info-item__icon
+				img(src="./img/"+ iconSrc +".png", width=""+ iconWidth  alt="alt")
+			if desk
+				.info-item__desk #{desk}
+	else
+		.info-item
+			.info-item__title !{title}
+			.info-item__icon
+				img(src="./img/"+ iconSrc +".png", width=""+ iconWidth  alt="alt")
+			if desk
+				.info-item__desk #{desk}
+
+mixin projects-card(src, title)
+	.projects-card
+		.projects-card__img
+			img(src="./img/project"+ src +".jpg", width="380"  alt="project")
+		.projects-card__text
+			.projects-card__text-title #{title}
+			.projects-card__text-info 
+				p #[b Габариты:] 11,0 х 12,0 м. #[b Площадь:] 291,7 м кв.
+				p 2 этажа, 4 спальни, 3 санузла
+				
+			.projects-card__text-price от 10 863 123 ₽
+		.projects-card__btn
+			button.btn-light.btn-light--green Подробнее о проекте

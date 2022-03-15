@@ -1,0 +1,9 @@
+.projects-wrapper{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	row-gap:55px ;
+	&__item{
+		display: flex;
+		justify-content: center;
+	}
+}
