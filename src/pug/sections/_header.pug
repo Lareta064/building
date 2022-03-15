@@ -1,0 +1,52 @@
+
+
+header.header
+	//============== header mobile ==============
+	.header-mobile
+		.container
+			.header-mobile-content
+				.header-logo
+					a(href="index.ntml")
+						img(src="./img/logo.png", alt="logo")
+				
+				.header-mobile-column
+					.mobile-phone
+						a(href="tel:89028658285")
+							i.fa-solid.fa-phone
+					.menu-toggle
+						span
+	
+	//============== header desktop ==============
+	.header-desktop
+		.container
+			.header-content
+				.header-logo
+					a(href="index.ntml")
+						img(src="./img/logo.png", alt="logo")
+				.header-wrapper
+					.header-wrapper__top
+						.header-column
+							.header-location
+								.header-location__icon
+									i.fa-solid.fa-location-dot
+								.header-location__city.text-12 Челябинск
+							.header-address.text-12 . Челябинск, пл. Революции, дом 7
+							.header-working.text-12 без выходных с 9:00 до 18:00
+						.header-column
+							.header-social
+								p Пишите, мы онлайн
+								.header-social__links
+									script(src='https://yastatic.net/share2/share.js')
+									.ya-share2(data-curtain='' data-shape='round' data-services='odnoklassniki,telegram,viber,whatsapp')
+
+						.header-column
+							.page-contacts
+								.page-contacts__phone
+									a(href="tel:89028658285") +7 902-865-82-85
+								.page-contacts__phone
+									a(href="tel:89085813946") +7 908 581-39-46
+						.header-button
+							.btn Заказать звонок
+					.header-wrapper__bottom
+						include ../blocks/_header-menu
+		

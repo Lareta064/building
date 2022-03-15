@@ -1,0 +1,21 @@
+.benefits-slider{
+	.swiper-button-next,
+	.swiper-button-prev{
+		color: #a3a3a3;
+		&:after{
+			font-size: 28px;
+			font-weight: 700;
+		}
+	}
+	.swiper-button-next {
+		right: 0;
+	}
+
+	.swiper-button-prev {
+		left: 0;
+	}
+}
+.swiper .swiper-slide{
+	display: flex;
+	justify-content: center;
+}
