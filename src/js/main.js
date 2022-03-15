@@ -32,4 +32,28 @@ document.addEventListener("DOMContentLoaded", function (){
     //   overlayModal.classList.remove('active');
     //   for(let item of modalFrames){item.classList.remove('visible')}
     // });
+
+    let cardsSlider = new Swiper(".cards-block", {
+       slidesPerView: 1,
+        speed:800,
+        loop: true,
+        breakpoints: {
+				455: {
+					slidesPerView: 2
+				},
+				700:{
+					slidesPerView: 3
+				},
+				1024:{
+					slidesPerView: 4
+				},
+        1200:{
+          slidesPerView: 5,
+        },
+        1365:{
+          slidesPerView: 7
+        }
+			}
+      });
+
 })
