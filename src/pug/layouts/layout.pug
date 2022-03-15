@@ -7,6 +7,9 @@ html(lang="ru")
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//======= swipe =============
+		link(rel="stylesheet" href="libs/swiper/swiper.min.css" )
 		//=============== fontawesome icons ===================
 		script(src="https://kit.fontawesome.com/1cb793711e.js" crossorigin="anonymous")
 		//====убрать синий цвет у ссылок в сафари ========
@@ -15,9 +18,15 @@ html(lang="ru")
 		title !{title}
 		
 	body
-		
+		#overlay
 		block content
 		
+		
+		//=============== jquery ===================
+		script(src="./libs/jquery/jquery-3.0.0.min.js")
+		
+		//=============== swiper ===================
+		script(src="libs/swiper/swiper.js")
 		
 		//=============== мои скрипты ===================	
 		script(src="js/main.js")

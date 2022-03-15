@@ -15,3 +15,11 @@ mixin header-menu(...arg)
 				else
 					li
 						a(href=""+ item.link) #{item.title}
+
+mixin benefit-item(title, iconSrc, iconWidth="100")
+	.info-item
+		.info-item__title !{title}
+		.info-item__icon
+			img(src="./img/"+ iconSrc +".png", width=""+ iconWidth  alt="alt")
+		if desk
+			.info-item__desk #{desk}
