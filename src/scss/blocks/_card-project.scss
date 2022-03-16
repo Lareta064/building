@@ -29,8 +29,18 @@
 			margin-bottom: 18px;
 			font-family: $mm;
 		}
+
 		&-price{margin-top: 20px;}
 
+	}
+	&__text-info{
+		p span {
+			white-space: nowrap;
+			@media(max-width:1364px){
+				display: block;
+				line-height: 1.5;
+			}
+		}
 	}
 	&__btn{
 		padding-left: 10px;

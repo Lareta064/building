@@ -16,7 +16,7 @@ mixin header-menu(...arg)
 					li
 						a(href=""+ item.link) #{item.title}
 
-mixin benefit-item(title, iconSrc, iconWidth="100", frameBtn)
+mixin benefit-item(title, iconSrc, iconWidth="100", desk, frameBtn)
 	if frameBtn
 		.info-item(frame-btn="benefit-desk")
 			.info-item__title !{title}
@@ -30,7 +30,7 @@ mixin benefit-item(title, iconSrc, iconWidth="100", frameBtn)
 			.info-item__icon
 				img(src="./img/"+ iconSrc +".png", width=""+ iconWidth  alt="alt")
 			if desk
-				.info-item__desk #{desk}
+				.info-item__desk !{desk}
 
 mixin projects-card(src, title)
 	.projects-card
@@ -39,7 +39,9 @@ mixin projects-card(src, title)
 		.projects-card__text
 			.projects-card__text-title #{title}
 			.projects-card__text-info 
-				p #[b Габариты:] 11,0 х 12,0 м. #[b Площадь:] 291,7 м кв.
+				p 
+					span #[b Габариты:] 11,0 х 12,0 м. 
+					span #[b Площадь:] 291,7 м кв.
 				p 2 этажа, 4 спальни, 3 санузла
 				
 			.projects-card__text-price от 10 863 123 ₽
