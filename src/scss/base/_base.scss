@@ -283,5 +283,8 @@ input[type="submit"]{
 		font-size: 14px;
 		line-height: 16px;
 		padding-top: 10px;
+		a{
+			white-space: nowrap;
+		}
 	}
 } 

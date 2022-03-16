@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function (){
     //   overlayModal.classList.remove('active');
     //   for(let item of modalFrames){item.classList.remove('visible')}
     // });
-
+    /*  Слайдер ПРЕИМУЩЕСТВА */
     let benefitsSlider = new Swiper(".benefits-slider", {
        slidesPerView: 1,
         speed:800,
@@ -57,6 +57,47 @@ document.addEventListener("DOMContentLoaded", function (){
         }
 			}
       });
+
+     /*  Слайдер РЕАЛИЗОВАННЫЕ ПРОЕКТЫ */
+    let portfolioSlider = new Swiper(".portfolio-slider", {
+       slidesPerView: 1,
+        speed:800,
+        loop: true,
+        centeredSlides: true,
+         navigation: {
+          nextEl: ".portfolio-slider-next",
+          prevEl: ".portfolio-slider-prev",
+        },
+        breakpoints: {
+				425: {
+					slidesPerView: 1.1
+				},
+        575: {
+					slidesPerView: 1.5
+				},
+				700:{
+					slidesPerView: 1.8,
+          centeredSlides: true,
+				}, 
+        991:{
+	        slidesPerView: 2.2,
+        },
+        1200:{
+	        slidesPerView: 2.8,
+        },
+        1364:{
+          	slidesPerView: 3.5,
+        },
+        
+        1440:{
+          	slidesPerView: 3.7,
+        },
+        1800:{
+          	slidesPerView: 4.6,
+        }
+
+      }
+    });
 
      /* modal*/ 
     const modalFramesOpen = document.querySelectorAll('[frame-btn]');
