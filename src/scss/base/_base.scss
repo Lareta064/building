@@ -141,10 +141,15 @@ input[type="submit"]{
 	font-size: 16px;
 	font-family: $mm;
 }
-.title-22{
+.title-22, .title-color{
 	font-size: 22px;
 	text-transform: uppercase;
 	font-family: $mm;
+	margin-bottom: 20px;
+}
+.text-orange,
+.title-color {
+	color: #ecb553;
 }
 .text-12{
 	font-size: 12px;
@@ -163,6 +168,7 @@ input[type="submit"]{
 .flex-block,
 .flex-center,
 .flex-start,
+.flex-end,
 .flex-header {
 	display: flex;
 	align-items: center;
@@ -170,6 +176,7 @@ input[type="submit"]{
 .flex-center{
 	justify-content: center;
 }
+.flex-end{justify-content: flex-end;}
 .flex-start{
 	align-items: flex-start;
 }
@@ -177,6 +184,9 @@ input[type="submit"]{
 	justify-content: space-between;
 	.section-title{margin-bottom: 0;}
 	margin-bottom: 40px;
+	@media (max-width: 767px) {
+		margin-bottom: 20px;
+	}
 }
 .p-60{
 	padding-top: 60px;
@@ -189,6 +199,7 @@ input[type="submit"]{
 .grey-bg{
 	background-color: #f4f4f4;
 }
+.w-100{width: 100%;}
 .container{
 	width: 1300px;
 	padding-left: 15px;
@@ -249,7 +260,20 @@ input[type="submit"]{
 		color: #1e1f24;
 	}
 }
-
+.animate-border{
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 0;
+		transition: .3s;
+		height: 1px;
+		background-color: rgba(255,255,255, .7);
+	}
+	&:hover:after{width: 100%;}
+}
 .page-contacts{
  .page-contacts__phone{
 	 font-size: 18px;
@@ -259,7 +283,7 @@ input[type="submit"]{
 	 }
 	&+.page-contacts__phone{margin-top: 10px;}
  }
- .page-contacts__phone:hover{opacity: .7;}
+ 
 }
 .info-item{
 	text-align: center;

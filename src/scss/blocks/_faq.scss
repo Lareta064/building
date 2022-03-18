@@ -1,0 +1,85 @@
+.faq-content .acor-container{
+	max-width: 975px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.faq .section-button{
+	@media(max-width:767px){
+		display: none;
+	}
+}
+.acor-item{
+	border-bottom: 1px solid rgb(147, 147, 147);
+}
+.acor-container .acor-body {
+	
+	height: 0;
+	color: rgba(0, 0, 0, 0);
+	padding: 0 20px;
+	box-sizing: border-box;
+	transition: color 0.5s, padding 0.5s;
+	overflow: hidden;
+	
+	
+}
+
+.acor-container .acor-body p {
+	margin: 0 0 10px;
+	font-size: 14px;
+	line-height: 20px;
+	&+p{
+		padding-top: 10px;
+	}
+}
+
+.acor-container label {
+	position: relative;	
+	cursor: pointer;
+	display: block;
+	padding: 15px 16px;
+	width: 100%;
+	color: #222222;
+	font-family: $mm;
+	font-size: 20px;
+	z-index: 10;
+	transition: color .35s;
+	@media(max-width:1023px){
+		font-size: 16px;
+	}
+	
+}
+
+.acor-container label:hover {
+	color: #000;
+}
+
+.acor-container input {
+	display: none;
+}
+
+.acor-container label:before {
+	content: '\f057';
+	position: absolute;
+	right: 0;
+	top: 12px;
+	font-size: 25px;
+	font-family: 'fontAwesome';
+	color: #ecb553;
+}
+
+.acor-container input:checked+label {
+	color: #222222;
+}
+
+.acor-container input:checked+label:before {
+	transition: transform .35s;
+	transform: rotate(45deg);
+}
+
+.acor-container input:checked+label+.acor-body {
+	height: auto;
+	margin-top: -5px;
+	color: #000;
+	padding: 16px 16px 10px;
+}
+

@@ -1,0 +1,15 @@
+//======== modal Напишите нам ============
+.modal-frame(frame-modal="send_message")
+	.modal-frame-content
+		.form-wrapper
+			.modal-frame-close(frame-close)
+				span +
+			.title-color Напишите нам
+			form.form-send-message.w-100
+				.form-item
+					input(type="text" name="" placeholder="Имя")
+				.form-item
+					textarea(placeholder="Сообщение")
+				
+				.form-item.flex-end
+					button.btn.text-upper(type="submit") Отправить

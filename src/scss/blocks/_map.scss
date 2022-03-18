@@ -1,0 +1,49 @@
+.map{
+	height: 450px;
+	position: relative;
+	&-wrapper{
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 1;
+		@media (max-width: 767px) {
+			position: relative;
+			height: 300px;
+		}
+
+	}
+	&-contacts{
+		position: relative;
+		z-index: 3;
+		padding: 40px 35px;
+		background-color: rgba(51, 51, 51, .9);
+		max-width: 434px;
+		height: 100%;
+		color: #fff;
+		p,a,span{color: #fff;}
+		
+		.title-color {
+			margin-bottom: 25px;
+			font-family: $mb;
+		}
+		.page-contacts{
+			margin-bottom: 25px;
+			&>*{
+				margin-bottom: 20px;
+			}
+		}
+	}
+		@media (max-width: 424px) {
+			.container{padding: 0;}
+		}
+}
+.popup-message{
+	margin-bottom: 25px;
+	a{
+		text-decoration: underline;
+		color: $yellow;
+	}	
+}
+	

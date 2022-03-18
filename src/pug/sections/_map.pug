@@ -1,0 +1,19 @@
+section.map.p-60
+	.container
+		.map-contacts
+			.title-color Наши контакты
+			.page-contacts
+				.page-contacts__phone
+					a.animate-border(href="tel:89028658285") +7 902-865-82-85
+				.page-address 454091 г. Челябинск, пл. Революции, дом 7
+				.page-email
+					a.animate-border(href="mailto:domkomplekt74@ya.ru") domkomplekt74@ya.ru
+			
+			.popup-message
+				a(href="#!" frame-btn="send_message") Напишите нам
+			.page-social__links
+				script(src='https://yastatic.net/share2/share.js')
+				.ya-share2(data-curtain='' data-shape='round' data-services='odnoklassniki,telegram,viber,whatsapp')
+		//======map======
+		.map-wrapper
+			iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Af099ce1adece0115686c12da810218494cc98b52cf3efc850f28029ba7f7b89a&source=constructor' width='100%' height='100%' frameborder='0')

@@ -50,29 +50,36 @@
 		font-size: 14px;
 		margin-bottom: 15px;
 	}
-	.ya-share2__container_shape_round.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy) {
-		background-size: 26px 26px;
-		@media(max-width:1364px){
-			background-size: 20px 20px;
-		}
-	}
-	.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon {
-		height: 30px;
-		width: 30px;
-		background-size: 26px 26px;
-		@media(max-width:1364px){
-			height: 24px;
-			width: 24px;
-		}
-	}
-	.ya-share2__list.ya-share2__list_direction_horizontal>.ya-share2__item+.ya-share2__item {
-		margin-left: 10px;
-	}
+	
 	&-button{
 		.btn:hover{
 			color: #fff;
 		}
 	}
+}
+.page-social__links{
+.ya-share2__container_shape_round.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy) {
+	background-size: 26px 26px;
+
+	@media(max-width:1364px) {
+		background-size: 20px 20px;
+	}
+}
+
+.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon {
+	height: 30px;
+	width: 30px;
+	background-size: 26px 26px;
+
+	@media(max-width:1364px) {
+		height: 24px;
+		width: 24px;
+	}
+}
+
+.ya-share2__list.ya-share2__list_direction_horizontal>.ya-share2__item+.ya-share2__item {
+	margin-left: 10px;
+}
 }
 .header-mobile-content{
 	display: flex;
