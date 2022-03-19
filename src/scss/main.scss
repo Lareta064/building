@@ -1,5 +1,7 @@
 @import "base/_var";
 @import "base/_base";
+@import "base/_breadcr";
+@import "base/_pagination";
 
 //blocks
 
@@ -15,4 +17,13 @@
  @import "blocks/feedback";
  @import "blocks/faq";
  @import "blocks/map";
+ @import "blocks/catalog-tabs";
+ @import "blocks/guarantees";
+ @import "blocks/project-slider";
+
+
+ @import "pages/catalog";
+
+
+ @import "blocks/footer";
  @import "blocks/modals";

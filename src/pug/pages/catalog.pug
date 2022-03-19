@@ -3,11 +3,10 @@ extends ../layouts/layout.pug
 block content
 	include ../sections/_header.pug
 	include ../sections/_header-banner.pug
-	main.main-page
-		include ../sections/_information-block.pug
-		include ../sections/_benefits-slider.pug
-		include ../sections/_projects.pug
-		include ../sections/_how-work.pug
+	main.catalog-page
+		include ../sections/_catalog.pug
+		include ../sections/_guarantees.pug
+		
 		include ../sections/_portfolio.pug
 		include ../sections/_feedback.pug
 		include ../sections/_faq.pug
@@ -16,10 +15,10 @@ block content
 	include ../sections/_footer.pug
 	
 	
-	include ../sections/_modals.pug
+	
 	include ../sections/_modal-send-message.pug
 	
 	
 	
 block variables
-	-var title = "Главная";
+	-var title = "Каталог";

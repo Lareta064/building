@@ -31,13 +31,16 @@
 		.page-contacts{
 			margin-bottom: 25px;
 			&>*{
-				margin-bottom: 20px;
+				margin-bottom: 16px;
 			}
 		}
 	}
-		@media (max-width: 424px) {
-			.container{padding: 0;}
-		}
+	@media (max-width: 767px) {
+		height: auto;
+		.container{padding: 0;}
+		&-contacts {max-width: 100%;}
+	}
+	
 }
 .popup-message{
 	margin-bottom: 25px;
@@ -46,4 +49,8 @@
 		color: $yellow;
 	}	
 }
-	
+
+.page-address, .page-email{
+	font-size: 14px;
+	margin-bottom: 16px;
+}

@@ -77,3 +77,11 @@
 .form-item+.form-item{
 	margin-top: 25px;
 }
+.modal-frame-title{
+	margin-bottom: 25px;
+	&>*+*{margin-top: 12px;}
+	p{
+		font-size: 20px;
+	}
+}
+.modal-frame-title.text-center{text-align: center;}

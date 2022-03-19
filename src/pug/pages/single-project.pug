@@ -1,0 +1,23 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header.pug
+	
+	main.single-project-page
+		include ../sections/_single-project.pug
+		include ../sections/_portfolio.pug
+		include ../sections/_feedback.pug
+		include ../sections/_faq.pug
+		//- include ../sections/_map.pug
+	
+	include ../sections/_footer.pug
+	
+	
+	
+	include ../sections/_modal-send-message.pug
+	include ../sections/_order_call.pug
+	
+	
+	
+block variables
+	-var title = "Страница проекта";

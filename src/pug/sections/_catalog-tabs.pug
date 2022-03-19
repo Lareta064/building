@@ -1,0 +1,124 @@
+//============tabs ================
+.catalog-tabs.pt-40
+	.section-title проекты домов и цены
+	.catalog-tabs-wrapper(custom-tabs)
+		.catalog-tabs-header
+			//=============tabs toggle ==============
+			.catalog-tabs-content
+				.catalog-tabs-btns.swiper
+					.swiper-wrapper.custom-tabs__btns
+						.swiper-slide
+							.custom-tabs-btn.custom-tab--current(ct-btn="1") Одноэтажный
+						.swiper-slide
+							.custom-tabs-btn(ct-btn="2") Двухэтажный
+						.swiper-slide
+							.custom-tabs-btn(ct-btn="3") Трехэтажный
+						.swiper-slide
+							.custom-tabs-btn(ct-btn="4") С мансардой
+						.swiper-slide
+							.custom-tabs-btn(ct-btn="5") С цокольным этажем
+						.swiper-slide
+							.custom-tabs-btn(ct-btn="6") Одноэтажный
+						.swiper-slide
+							.custom-tabs-btn(ct-btn="7") Двухэтажный
+						.swiper-slide
+							.custom-tabs-btn(ct-btn="8") Трехэтажный
+						.swiper-slide
+							.custom-tabs-btn(ct-btn="9") С мансардой
+					
+					//======slider arrows =======
+					.swiper-arrows
+						.catalog-tabs-next.swiper-button-next
+						.catalog-tabs-prev.swiper-button-prev
+				
+			//=======ссылка на все проекты
+			.catalog-header-btn
+				a.color-link(href="#!") Смотреть все
+		
+		//======Контент Одноэтажные =======
+		.custom-tabs__content
+			.custom-tabs__content-block.ct-content--active(ct-content="1")
+				.catalog-group-wrapper
+					//========блок карточек =========
+					.catalog-group
+						.catalog-group-title
+							.title-24 Одноэтажные дома фахверк
+						.catalog-group-cards
+							.projects-wrapper
+								.projects-wrapper__item
+									+projects-card('1', 'Сканди Long')
+								.projects-wrapper__item
+									+projects-card('2', 'Сканди Long')
+								.projects-wrapper__item
+									+projects-card('3', 'Сканди Long')
+								
+					//========блок карточек =========
+					.catalog-group
+						.catalog-group-title
+							.title-24 Одноэтажные дома фахверк
+						.catalog-group-cards
+							.projects-wrapper
+								.projects-wrapper__item
+									+projects-card('1', 'Сканди Long')
+								.projects-wrapper__item
+									+projects-card('2', 'Сканди Long')
+								.projects-wrapper__item
+									+projects-card('3', 'Сканди Long')
+				
+				//======= блок с пагинацией ========			
+				.catalog-block-btn.flex-center
+					button.show-more
+						span Показать еще
+						i.fa-solid.fa-rotate-right
+				.catalog-block-pagination
+					.paginatopn-block
+						a.active(href="#!") 1
+						a(href="#!") 2
+						a(href="#!") 3
+						a(href="#!") ...
+						a(href="#!") 15
+			
+			//======Контент Двухэтажные =======
+			.custom-tabs__content-block(ct-content="2")
+				.catalog-group-wrapper
+					//========блок карточек =========
+					.catalog-group
+						.catalog-group-title
+							.title-24  Двухэтажные дома фахверк
+						.catalog-group-cards
+							.projects-wrapper
+								.projects-wrapper__item
+									+projects-card('1', 'Сканди Long')
+								.projects-wrapper__item
+									+projects-card('2', 'Сканди Long')
+								.projects-wrapper__item
+									+projects-card('3', 'Сканди Long')
+			
+			//======Контент Трехэтажные =======
+			.custom-tabs__content-block(ct-content="3")
+				.catalog-group-wrapper
+					//========блок карточек =========
+					.catalog-group
+						.catalog-group-title
+							.title-24 Трехэтажные дома фахверк
+						.catalog-group-cards
+							.projects-wrapper
+								.projects-wrapper__item
+									+projects-card('1', 'Сканди Long')
+								.projects-wrapper__item
+									+projects-card('2', 'Сканди Long')
+								.projects-wrapper__item
+									+projects-card('3', 'Сканди Long')
+			
+			.custom-tabs__content-block(ct-content="4")
+				p tab content 4
+			.custom-tabs__content-block(ct-content="5")
+				p tab content 5
+			.custom-tabs__content-block(ct-content="6")
+				p tab content 6
+			.custom-tabs__content-block(ct-content="7")
+				p tab content 7
+			.custom-tabs__content-block(ct-content="8")
+				p tab content 8
+			.custom-tabs__content-block(ct-content="9")
+				p tab content 9

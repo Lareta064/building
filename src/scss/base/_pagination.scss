@@ -1,0 +1,27 @@
+.paginatopn-block{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	a{
+		width: 35px;
+		height: 35px;
+		border: 1px solid rgb(204, 204, 204);
+		transition: .3s;
+		cursor:pointer;
+		color: #777;
+		line-height: 35px;
+		white-space: nowrap;
+		text-align: center;
+		&:hover{
+			border: 1px solid $yellow;
+			color: $yellow;
+		}
+	}
+	a.active{
+		border: 1px solid $yellow;
+		background-color: $yellow;
+		color: #fff;
+	}
+	a+a{margin-left: 15px;}
+}
+

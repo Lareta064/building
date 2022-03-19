@@ -1,0 +1,33 @@
+.breadcr{
+	display: flex;
+	align-items: center;
+	padding-top: 40px;
+	a{
+		color: $yellow;
+		position: relative;
+		width: fit-content;
+		display: block;
+		border-bottom: 1px solid $yellow;
+		&:hover{
+			border-bottom:1px solid transparent;
+		}
+		&:last-child{
+			color: #222;
+			border-bottom: none;
+			cursor: default;
+			pointer-events: none;
+			&:before{display: none;}
+		}
+	}
+	a:before{
+		content: '\f105';
+		font-family: 'fontAwesome';
+		position: absolute;
+		right: -14px;
+		top: 3px;
+		font-size: 14px;
+	}
+	a+a{
+		margin-left: 20px;
+	}
+}

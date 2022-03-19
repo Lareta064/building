@@ -1,0 +1,16 @@
+//======== modal Заказать звонок ============
+.modal-frame(frame-modal="order_call")
+	.modal-frame-content
+		.form-wrapper
+			.modal-frame-close(frame-close)
+				span +
+			.modal-frame-title.text-center
+				.title-color Заказать звонок
+				p.text-center Введите ваш номер телефона и мы свяжемся с вами
+			
+			form.form-send-message.w-100
+				.form-item
+					input.phone(type="text" name="" placeholder="Номер телефона")
+				
+				.form-item.flex-end
+					button.btn.text-upper(type="submit") Отправить
