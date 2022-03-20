@@ -1,6 +1,9 @@
 .feedback{
 	position: relative;
 	background-color: #f4f4f4;
+	.oval-right-bg{
+		top: 45%;
+	}
 	&:before{
 		content: '';
 		position: absolute;

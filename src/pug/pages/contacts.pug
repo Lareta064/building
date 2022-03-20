@@ -1,0 +1,25 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header.pug
+	include ../sections/_header-banner.pug
+	main.contacts-page.p-60
+		.breadcr
+			a(href="#!") Урал Фахверк
+			a(href="#!") Наши дома
+			a(href="#!") Дом Модерн
+		include ../sections/_contacts-page.pug
+		
+		include ../sections/_feedback.pug
+		
+			
+	include ../sections/_footer.pug
+	
+	
+	
+	include ../sections/_modal-send-message.pug
+	
+	
+	
+block variables
+	-var title = "Каталог";
