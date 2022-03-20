@@ -248,6 +248,12 @@ main,
 	}
 	
 }
+section + .grey-bg{
+	margin-top: 60px;
+	@media(max-width:767px) {
+		margin-top: 30px;
+	}
+}
 .w-100{width: 100%;}
 .breadcr,
 .container{
