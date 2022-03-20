@@ -3,7 +3,10 @@ extends ../layouts/layout.pug
 block content
 	include ../sections/_header.pug
 	include ../sections/_header-banner.pug
-	main.catalog-page
+	main.catalog-page.p-60
+		.breadcr
+			a(href="#!") Урал Фахверк
+			a(href="#!") Проекты
 		include ../sections/_catalog.pug
 		include ../sections/_guarantees.pug
 		

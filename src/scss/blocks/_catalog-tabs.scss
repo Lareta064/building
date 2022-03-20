@@ -2,7 +2,10 @@ div[ct-content] {
 	display: none;
 	
 }
-
+.custom-tabs__content{padding-top: 40px;}
+.custom-tabs-btn {
+	cursor: pointer;
+}
 .ct-content--active[ct-content] {
 	display: block;
 }

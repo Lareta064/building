@@ -1,4 +1,8 @@
 .portfolio{
+	padding-bottom: 60px;
+	@media(max-width:767px) {
+		padding-bottom: 30px;
+	}
 	.section-button{
 		@media(max-width:767px) {
 			display: none;
@@ -23,6 +27,21 @@
 			}
 			@media(max-width:767px) {
 				height: 200px;
+			}
+		}
+		p{
+			font-size: 18px;
+			padding-top: 12px;
+			color: #222222;
+			border-bottom: 1px solid #222222;
+			width: fit-content;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&:hover{
+			p{
+				color: $yellow;
+				border-bottom: 1px solid $yellow;
 			}
 		}
 	}

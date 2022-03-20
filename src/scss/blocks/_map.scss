@@ -54,3 +54,9 @@
 	font-size: 14px;
 	margin-bottom: 16px;
 }
+.grey-bg + .map{
+	margin-top: 60px;
+	@media (max-width: 767px) {
+		margin-top: 30px;
+	}
+}
