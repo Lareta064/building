@@ -158,6 +158,19 @@ document.addEventListener("DOMContentLoaded", function (){
           prevEl: ".project-variants-prev",
         }
       });
+
+      /*====slider  guarantees mobile =========*/
+
+      let guarantees = new Swiper(".guarantees-content-mobile", {
+       slidesPerView: 1,
+        speed:800,
+        loop:true,
+         navigation: {
+          nextEl: ".guarantees-slider-next",
+          prevEl: ".guarantees-slider-prev",
+        }
+      });
+
      /* modal*/ 
     const modalFramesOpen = document.querySelectorAll('[frame-btn]');
     const modalFrames = document.querySelectorAll('[frame-modal]');

@@ -1,0 +1,28 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header.pug
+	
+	main.news-page.p-60.pb-0
+		.breadcr
+			a(href="#!") Урал Фахверк
+			a(href="#!")  О нас
+			a(href="#!")  Новости
+			
+		include ../sections/_news-page.pug
+		include ../sections/_guarantees.pug
+		include ../sections/_portfolio.pug
+		include ../sections/_feedback.pug
+		include ../sections/_faq.pug
+		include ../sections/_map.pug
+	
+	include ../sections/_footer.pug
+	
+	
+	
+	include ../sections/_modal-send-message.pug
+	
+	
+	
+block variables
+	-var title = "Новости";

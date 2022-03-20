@@ -247,8 +247,10 @@ main,
 	position: relative;
 	overflow: hidden;
 	padding-bottom: 60px;
+	padding-top: 60px;
 	@media(max-width:767px){
 		padding-bottom: 30px;
+		padding-top: 30px;
 	}
 	.container{position: relative;z-index: 2;
 	}
