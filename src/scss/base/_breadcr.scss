@@ -2,12 +2,25 @@
 	display: flex;
 	align-items: center;
 	margin-bottom: 40px;
+	overflow: hidden;
+	overflow-x: auto;
+	scrollbar-width: none;
+	@media (max-width: 767px) {
+		margin-bottom: 25px;
+	&::-webkit-scrollbar{
+		width: 0;
+		display: none;
+	}
 	a{
 		color: $yellow;
 		position: relative;
 		width: fit-content;
 		display: block;
 		border-bottom: 1px solid $yellow;
+		white-space: nowrap;
+		@media (max-width: 767px) {
+			font-size: 14px;
+		}
 		&:hover{
 			border-bottom:1px solid transparent;
 		}

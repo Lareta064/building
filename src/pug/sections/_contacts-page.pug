@@ -1,0 +1,32 @@
+section.contacts-page-content
+	.container
+		.contacts-page-title 
+			.section-title Контакты
+	.contacts-page-row
+		//======= map block =========
+		.contacts-page__map
+			iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Af099ce1adece0115686c12da810218494cc98b52cf3efc850f28029ba7f7b89a&source=constructor' width='100%' height='100%' frameborder='0')
+		
+		//======= right block =========
+		.contacts-page__info
+			.title-28 Свяжитесь с нами
+			.contacts-page__list
+				.contacts-page__list-item
+					.title-16 Телефоны:
+					a(href="tel:+79028658285") +7 902-865-82-85
+
+				.contacts-page__list-item
+					.title-16 Наш адрес:
+					p 454091, г. Челябинск, площадь Революции, дом 7
+
+				.contacts-page__list-item
+					.title-16 Мессенджеры:
+
+					a(href="#") WhatsApp
+					a(href="#") Telegram
+
+				.contacts-page__list-item
+					.title-16 Социальные сети:
+					.page-social__links
+						script(src='https://yastatic.net/share2/share.js')
+						.ya-share2(data-curtain='' data-shape='round' data-services='odnoklassniki,telegram,viber,whatsapp')

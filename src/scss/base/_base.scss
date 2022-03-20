@@ -164,6 +164,9 @@ input[type="submit"]{
 	font-size: 28px;
 	font-family: $mm;
 	margin-bottom: 1em;
+	@media (max-width: 767px) {
+		font-size: 18px;
+	}
 }
 .text-center{text-align: center;}
 .text-orange,
