@@ -1,6 +1,7 @@
 .map{
 	height: 450px;
 	position: relative;
+	margin-top: 60px;
 	&-wrapper{
 		position: absolute;
 		top: 0;
@@ -37,6 +38,7 @@
 	}
 	@media (max-width: 767px) {
 		height: auto;
+		margin-top: 30px;
 		.container{padding: 0;}
 		&-contacts {max-width: 100%;}
 	}
@@ -53,10 +55,4 @@
 .page-address, .page-email{
 	font-size: 14px;
 	margin-bottom: 16px;
-}
-.grey-bg + .map{
-	margin-top: 60px;
-	@media (max-width: 767px) {
-		margin-top: 30px;
-	}
 }
