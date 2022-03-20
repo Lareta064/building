@@ -160,6 +160,12 @@ input[type="submit"]{
 	margin-bottom: 25px;
 	line-height: 1.1;
 }
+.title-28{
+	font-size: 28px;
+	font-family: $mm;
+	margin-bottom: 1em;
+}
+.text-center{text-align: center;}
 .text-orange,
 .title-color {
 	color: #ecb553;
@@ -207,6 +213,15 @@ input[type="submit"]{
 		margin-bottom: 16px;
 	}
 }
+
+section+section{
+	padding-top: 60px;
+	@media(max-width:767px) {
+		padding-top: 30px;
+		
+	}
+}
+main,
 .p-60{
 	padding-top: 60px;
 	padding-bottom: 60px;
@@ -225,11 +240,22 @@ input[type="submit"]{
 	background-color: #f4f4f4;
 	position: relative;
 	overflow: hidden;
+	padding-bottom: 60px;
+	@media(max-width:767px){
+		padding-bottom: 30px;
+	}
 	.container{position: relative;z-index: 2;
 	}
 	
 }
+section + .grey-bg{
+	margin-top: 60px;
+	@media(max-width:767px) {
+		margin-top: 30px;
+	}
+}
 .w-100{width: 100%;}
+.breadcr,
 .container{
 	width: 1300px;
 	padding-left: 15px;
