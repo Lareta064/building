@@ -4,16 +4,14 @@ block content
 	include ../blocks/_mobmenu.pug
 	include ../sections/_header.pug
 	
-	main.single-news.p-60.pb-0
+	main.service-page.p-60.pb-0
 		.breadcr
 			a(href="#!") Урал Фахверк
-			a(href="#!") О нас
-			a(href="#!") Новости
-			a(href="#!") Дом Модерн
-
-		include ../sections/_information-block-video.pug
-		include ../sections/_guarantees.pug
-		include ../sections/_portfolio3.pug
+			a(href="#!") Услуги
+			a(href="#!") Проектирование дома
+			
+		include ../sections/_service.pug		
+		include ../sections/_portfolio.pug
 		include ../sections/_feedback.pug
 		include ../sections/_faq.pug
 		include ../sections/_map.pug
@@ -29,4 +27,4 @@ block content
 	
 	
 block variables
-	-var title = "Страница новости";
+	-var title = "Услуги";

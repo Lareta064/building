@@ -159,6 +159,9 @@ input[type="submit"]{
 	font-family: $mm;
 	margin-bottom: 25px;
 	line-height: 1.1;
+	@media (max-width: 767px) {
+		font-size: 18px;
+	}
 }
 .title-28{
 	font-size: 28px;
@@ -233,6 +236,9 @@ main,
 		padding-bottom: 30px;
 	}
 }
+.mt-30{
+	margin-top: 30px;
+}
 .pt-40{
 	padding-top: 40px;
 }
@@ -241,6 +247,17 @@ main,
 }
 .pb-0{
 	padding-bottom: 0;
+}
+.visible-desktop{
+display: block;
+@media(max-width:767px){display: none;}
+} 
+.visible-mobile{
+display: none;
+
+@media(max-width:767px) {
+	display: block;
+}
 }
 .grey-bg{
 	background-color: #f4f4f4;
