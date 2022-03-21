@@ -1,14 +1,12 @@
 extends ../layouts/layout.pug
 
 block content
-	include ../blocks/_mobmenu.pug
 	include ../sections/_header.pug
-	include ../sections/_header-banner.pug
-	main.main-page.p-60.pb-0
-		include ../sections/_information-block.pug
-		include ../sections/_benefits-slider.pug
-		include ../sections/_projects.pug
-		include ../sections/_how-work.pug
+	
+	main.single-news.p-60.pb-0
+		include ../sections/_information-block-video.pug
+		
+		
 		include ../sections/_portfolio.pug
 		include ../sections/_feedback.pug
 		include ../sections/_faq.pug

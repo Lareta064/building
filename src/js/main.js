@@ -7,29 +7,85 @@ document.addEventListener("DOMContentLoaded", function (){
  
   const overlayBlock = document.querySelector('#overlay');
   const bodyEl = document.body;
-  menuToggle.addEventListener('click', function () {
+  // bodyEl.addEventListener('click', function (e) {console.log(e.target);});
+  menuToggle.addEventListener('click', function (e) {
+    e.stopPropagation();
     if (this.classList.contains('active')) {
-
+       
       this.classList.remove('active');
-    //   mobileMenu.classList.remove('active');
-    //   overlayBlock.classList.remove('active');
-    //   bodyEl.classList.remove('noscroll');
+      mobileMenu.classList.remove('active');
+      overlayBlock.classList.remove('active');
+      bodyEl.classList.remove('noscroll');
+      console.log(222)
 
     } else {
       this.classList.add('active');
-	//     mobileMenu.classList.add('active');
-    //   overlayBlock.classList.add('active');
-    //   bodyEl.classList.add('noscroll');
+	    mobileMenu.classList.add('active');
+      overlayBlock.classList.add('active');
+      bodyEl.classList.add('noscroll');
+      console.log(333);
+    
       }
     });
-    // window.addEventListener('resize', function () {
-    //   menuToggle.classList.remove('active');
-    //   mobileMenu.classList.remove('active');
-    //   overlayBlock.classList.remove('active');
-    //   bodyEl.classList.remove('noscroll');
-    //   overlayModal.classList.remove('active');
-    //   for(let item of modalFrames){item.classList.remove('visible')}
-    // });
+    window.addEventListener('resize', function () {
+      menuToggle.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      overlayBlock.classList.remove('active');
+      bodyEl.classList.remove('noscroll');
+      console.log(444);
+      if(overlayModal){
+         overlayModal.classList.remove('active');
+      }
+      for(let item of modalFrames){item.classList.remove('visible')}
+    });
+
+    
+      if(mobileMenu){
+        const mobMenuLinks = mobileMenu.querySelectorAll('a');
+        for(let item of mobMenuLinks){
+          item.addEventListener('click', function(e){
+            if( this.nextElementSibling.classList.contains('submenu')){
+              if( this.classList.contains('active')){
+                  this.classList.remove('active');
+              }
+              else{
+                this.classList.add('active');
+                this.nextElementSibling.classList.add('active');
+                this.previousElementSibling.classList.add('active');
+                e.preventDefault();
+              }
+            }
+          });
+        }
+        const mobMenuIcons = mobileMenu.querySelectorAll('.drop-icon');
+        for(let item of  mobMenuIcons){
+          const thisParent = item.closest('.drop-menu');
+          const thisParentSubMenu = thisParent.querySelector('.submenu');
+          item.addEventListener('click', function(){
+            if(this.classList.contains('active')){
+              this.classList.remove('active');
+              thisParent.classList.remove('active');
+              thisParentSubMenu.classList.remove('active');
+            }
+            else{
+               this.classList.add('active');
+              thisParent.classList.add('active');
+              thisParentSubMenu.classList.add('active');
+            }
+          })
+        }
+         overlay.addEventListener('click', function(e){
+            mobileMenu.classList.remove('active');
+            bodyEl.classList.remove('noscroll');
+            this.classList.remove('active');
+            menuToggle.classList.remove('active');
+            
+          });
+      }
+
+
+
+
     /*  Слайдер ПРЕИМУЩЕСТВА */
     let benefitsSlider = new Swiper(".benefits-slider", {
        slidesPerView: 1,
@@ -158,6 +214,19 @@ document.addEventListener("DOMContentLoaded", function (){
           prevEl: ".project-variants-prev",
         }
       });
+
+      /*====slider  guarantees mobile =========*/
+
+      let guarantees = new Swiper(".guarantees-content-mobile", {
+       slidesPerView: 1,
+        speed:800,
+        loop:true,
+         navigation: {
+          nextEl: ".guarantees-slider-next",
+          prevEl: ".guarantees-slider-prev",
+        }
+      });
+
      /* modal*/ 
     const modalFramesOpen = document.querySelectorAll('[frame-btn]');
     const modalFrames = document.querySelectorAll('[frame-modal]');
@@ -202,6 +271,7 @@ document.addEventListener("DOMContentLoaded", function (){
       }
       bodyEl.classList.remove('noscroll');
       this.classList.remove('active');
+      
     });
 
     /*===== Catalog  табы  ===== */
