@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", function (){
   
   menuToggle.addEventListener('click', function (e) {
     e.stopPropagation();
+    if(document.querySelector('.visible')){
+      document.querySelector('.visible').classList.remove('visible');
+    }
     if (this.classList.contains('active')) {
        
       this.classList.remove('active');
@@ -39,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function (){
         const mobMenuLinks = mobileMenu.querySelectorAll('a');
         for(let item of mobMenuLinks){
           item.addEventListener('click', function(e){
-            
             if( this.nextElementSibling.classList.contains('submenu')){
               if( this.classList.contains('active')){
                   this.classList.remove('active');
@@ -79,8 +81,8 @@ document.addEventListener("DOMContentLoaded", function (){
           });
       }
 
-
-
+      
+        
 
     /*  Слайдер ПРЕИМУЩЕСТВА */
     let benefitsSlider = new Swiper(".benefits-slider", {
@@ -233,6 +235,8 @@ document.addEventListener("DOMContentLoaded", function (){
         item.addEventListener('click', function(e){
           for(let item of  modalFrames){
             item.classList.remove('visible');
+
+            
             bodyEl.classList.remove('noscroll');
             overlay.classList.remove('active');
             
@@ -261,12 +265,20 @@ document.addEventListener("DOMContentLoaded", function (){
           item.closest('[frame-modal]').classList.remove('visible');
           bodyEl.classList.remove('noscroll');
           overlay.classList.remove('active');
+          if(item.closest('.modal-video')){
+            
+             item.closest('.modal-video').querySelector('.modal-video-wrapper iframe').contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+            }
         });
       }
     }
     overlay.addEventListener('click', function(e){
     for(let frame of modalFrames){
       frame.classList.remove('visible');
+      if( frame.querySelector('.modal-video-wrapper')){
+        console.log('223');
+          frame.querySelector('.modal-video-wrapper iframe').contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+        }
       }
       bodyEl.classList.remove('noscroll');
       this.classList.remove('active');
