@@ -1,0 +1,24 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header.pug
+	
+	main.single-news.p-60.pb-0
+		include ../sections/_information-block-video.pug
+		
+		
+		include ../sections/_portfolio.pug
+		include ../sections/_feedback.pug
+		include ../sections/_faq.pug
+		include ../sections/_map.pug
+	
+	include ../sections/_footer.pug
+	
+	
+	include ../sections/_modals.pug
+	include ../sections/_modal-send-message.pug
+	
+	
+	
+block variables
+	-var title = "Главная";
