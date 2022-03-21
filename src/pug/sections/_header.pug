@@ -29,14 +29,14 @@ header.header
 								.header-location__icon
 									i.fa-solid.fa-location-dot
 								.header-location__city.text-12 Челябинск
-							.header-address.text-12 . Челябинск, пл. Революции, дом 7
+							.header-address.text-12 г. Челябинск, пл. Революции, дом 7
 							.header-working.text-12 без выходных с 9:00 до 18:00
 						.header-column
 							.page-social__links
 								p Пишите, мы онлайн
-								.page-social__links
-									script(src='https://yastatic.net/share2/share.js')
-									.ya-share2(data-curtain='' data-shape='round' data-services='odnoklassniki,telegram,viber,whatsapp')
+								
+								script(src='https://yastatic.net/share2/share.js')
+								.ya-share2(data-curtain='' data-shape='round' data-services='odnoklassniki,telegram,viber,whatsapp')
 
 						.header-column
 							.page-contacts
@@ -46,7 +46,7 @@ header.header
 									a.animate-border(href="tel:89085813946") +7 908 581-39-46
 									
 						.header-button
-							.btn Заказать звонок
+							button.btn(frame-btn="order_call") Заказать звонок
 					.header-wrapper__bottom
 						include ../blocks/_header-menu
 		

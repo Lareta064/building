@@ -3,11 +3,9 @@ document.addEventListener("DOMContentLoaded", function (){
 /*============= menu toggle ===============*/
   const menuToggle = document.querySelector('.menu-toggle');
   const mobileMenu = document.querySelector('#mobile-menu');
-
- 
   const overlayBlock = document.querySelector('#overlay');
   const bodyEl = document.body;
-  // bodyEl.addEventListener('click', function (e) {console.log(e.target);});
+  
   menuToggle.addEventListener('click', function (e) {
     e.stopPropagation();
     if (this.classList.contains('active')) {
@@ -16,14 +14,14 @@ document.addEventListener("DOMContentLoaded", function (){
       mobileMenu.classList.remove('active');
       overlayBlock.classList.remove('active');
       bodyEl.classList.remove('noscroll');
-      console.log(222)
+      
 
     } else {
       this.classList.add('active');
 	    mobileMenu.classList.add('active');
       overlayBlock.classList.add('active');
       bodyEl.classList.add('noscroll');
-      console.log(333);
+      
     
       }
     });
@@ -32,10 +30,7 @@ document.addEventListener("DOMContentLoaded", function (){
       mobileMenu.classList.remove('active');
       overlayBlock.classList.remove('active');
       bodyEl.classList.remove('noscroll');
-      console.log(444);
-      if(overlayModal){
-         overlayModal.classList.remove('active');
-      }
+      
       for(let item of modalFrames){item.classList.remove('visible')}
     });
 
@@ -44,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function (){
         const mobMenuLinks = mobileMenu.querySelectorAll('a');
         for(let item of mobMenuLinks){
           item.addEventListener('click', function(e){
+            
             if( this.nextElementSibling.classList.contains('submenu')){
               if( this.classList.contains('active')){
                   this.classList.remove('active');
@@ -250,6 +246,10 @@ document.addEventListener("DOMContentLoaded", function (){
               frame.classList.add('visible');
               bodyEl.classList.add('noscroll');
                overlay.classList.add('active');
+               if(mobileMenu.classList.contains('active')){
+                 mobileMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+               }
             }
           }
         });
@@ -257,7 +257,6 @@ document.addEventListener("DOMContentLoaded", function (){
       /*закрыть модалки с атрибутом frame-modal*/
       for(let item of modalFramesClose){
         item.addEventListener('click', function(e){
-          
           e.preventDefault();
           item.closest('[frame-modal]').classList.remove('visible');
           bodyEl.classList.remove('noscroll');
