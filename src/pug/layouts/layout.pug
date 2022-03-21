@@ -7,13 +7,18 @@ html(lang="ru")
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
-
-		//======= swipe =============
-		link(rel="stylesheet" href="libs/swiper/swiper.min.css" )
-		//=============== fontawesome icons ===================
-		script(src="https://kit.fontawesome.com/1cb793711e.js" crossorigin="anonymous")
 		//====убрать синий цвет у ссылок в сафари ========
 		meta(name="format-detection" content="telephone=no")
+		//======= swipe =============
+		link(rel="stylesheet" href="libs/swiper/swiper.min.css" )
+		
+		//=============== fontawesome icons ===================
+		script(src="https://kit.fontawesome.com/1cb793711e.js" crossorigin="anonymous")
+		
+		//=============== lightbox gallery ===================
+		link(rel="stylesheet" href="libs/lightbox/css/lightbox.css")
+
+
 		link(rel="stylesheet", href="css/main.css")
 		title !{title}
 		
@@ -26,7 +31,13 @@ html(lang="ru")
 		script(src="./libs/jquery/jquery-3.0.0.min.js")
 		
 		//=============== swiper ===================
-		script(src="libs/swiper/swiper.js")
+		script(src="./libs/swiper/swiper.js")
 		
-		//=============== мои скрипты ===================	
-		script(src="js/main.js")
+		//=============== lightbox gallery ===================
+		script(src="./libs/lightbox/js/lightbox.min.js")
+		
+		//===============маска для поля телефона ===================
+		script(src="./libs/jquery.maskedinput.min.js")
+		
+		//=============== мои скрипты ===================
+		script(src="./js/main.js")

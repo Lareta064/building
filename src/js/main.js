@@ -152,6 +152,42 @@ document.addEventListener("DOMContentLoaded", function (){
 
       }
     });
+      let portfolioSliderShort = new Swiper(".portfolio-slider--short", {
+       slidesPerView: 1,
+        speed:800,
+        loop: true,
+        spaceBetween: 16,
+         navigation: {
+          nextEl: ".portfolio-short-next",
+          prevEl: ".portfolio-short-prev",
+        },
+        breakpoints: {
+				425: {
+					slidesPerView: 1.1
+				},
+        575: {
+					slidesPerView: 1.5
+				},
+				700:{
+					slidesPerView: 1.8,
+          centeredSlides: true,
+				}, 
+        991:{
+	        slidesPerView: 2,
+        },
+        1200:{
+	        slidesPerView: 2.2,
+        },
+        1364:{
+          	slidesPerView: 3,
+        },
+        
+        1440:{
+          	slidesPerView: 3.2,
+        }
+
+      }
+    });
 
     /*    catalog tabs */
     let catalogTabs = new Swiper(".catalog-tabs-btns", {
@@ -321,4 +357,21 @@ document.addEventListener("DOMContentLoaded", function (){
         }
       }
     }
+
+    // маска для телефона
+	$(".phone").mask("+7(999)999-99-99");
+	$.fn.setCursorPosition = function (pos) {
+		if ($(this).get(0).setSelectionRange) {
+			$(this).get(0).setSelectionRange(pos, pos);
+		} else if ($(this).get(0).createTextRange) {
+			var range = $(this).get(0).createTextRange();
+			range.collapse(true);
+			range.moveEnd('character', pos);
+			range.moveStart('character', pos);
+			range.select();
+		}
+	};
+	$('input.phone').click(function () {
+		$(this).setCursorPosition(3); // set position number
+	});
 })

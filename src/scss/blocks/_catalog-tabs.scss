@@ -60,8 +60,8 @@ div[ct-content] {
 		right: 0;
 		background-color: #fff;
 		&:after{
-			font-size: 24px;
-			color: #a3a3a3;
+			font-size: 30px;
+			color: #777;
 		}
 		&:hover{
 			background-color: #fff;
@@ -89,11 +89,11 @@ div[ct-content] {
 	cursor:pointer;
 	
 	z-index: 2;
-	color: #a3a3a3;
+	color: #444;
 	
 	&:after{font-size: 24px;}
 	&:hover:after{
-		color: $yellow;
+		color: #c78e1b;
 	}
 	&:hover {
 		opacity: 1;
