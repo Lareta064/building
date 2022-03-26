@@ -58,15 +58,15 @@ section.single-project-info
 						ul
 							li
 								p 
-									span Домокомплект
+									a(href="#single-project-tab" data-open="2") Домокомплект
 								span 3 120 000 &#8381;
 							li
 								p 
-									span Монтаж т\к
+									a(href="#single-project-tab"  data-open="3") Монтаж т\к
 								span 680 000 &#8381;
 							li
 								p 
-									span Дом под ключ
+									a(href="#single-project-tab"  data-open="4") Дом под ключ
 								span 8 450 000 &#8381;
 					.single-project-desk__btn
 						button.btn(frame-btn="order_call") Заказать звонок
@@ -132,7 +132,7 @@ section.single-project-variants
 section.single-project-complect.grey-bg
 	.container
 		.title-28.text-center Комплектация
-		.project-complect-tabs(custom-tabs)
+		.project-complect-tabs#single-project-tab(custom-tabs)
 			.scroll-wrapper
 				.custom-tabs__btns
 					.custom-tabs-btn.custom-tab--current(ct-btn="1")

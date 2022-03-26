@@ -80,10 +80,6 @@ document.addEventListener("DOMContentLoaded", function (){
             
           });
       }
-
-      
-        
-
     /*  Слайдер ПРЕИМУЩЕСТВА */
     let benefitsSlider = new Swiper(".benefits-slider", {
        slidesPerView: 1,
@@ -199,6 +195,9 @@ document.addEventListener("DOMContentLoaded", function (){
           prevEl: ".catalog-tabs-prev",
         },
         breakpoints: {
+        360: {
+					slidesPerView: 2.5
+				},
 				455: {
 					slidesPerView: 2.8
 				},
@@ -209,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function (){
 					slidesPerView: 5
 				},
         1200:{
-          slidesPerView: 6,
+          slidesPerView: 6.5,
         },
          1365:{
           slidesPerView: 8,
@@ -374,4 +373,29 @@ document.addEventListener("DOMContentLoaded", function (){
 	$('input.phone').click(function () {
 		$(this).setCursorPosition(3); // set position number
 	});
+
+
+
+  //*********** */
+  const dataOpen = document.querySelectorAll('[data-open');
+  if(dataOpen.length > 0){
+    const singleProjectTabs = document.getElementById('single-project-tab');
+    const singleProjectTabsBtn = singleProjectTabs.querySelectorAll('[ct-btn]');
+    let event = new Event("click");
+  
+    for(let item of dataOpen){
+      item.addEventListener('click', function(){
+        const thisData = item.getAttribute('data-open');
+        for(let btn of singleProjectTabsBtn){
+          const btnData = btn.getAttribute('ct-btn');
+          
+          if(btnData == thisData){
+            btn.dispatchEvent(event);
+             
+          }
+        }
+         
+      })
+    }
+  }
 })

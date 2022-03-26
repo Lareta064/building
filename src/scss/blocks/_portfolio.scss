@@ -20,10 +20,17 @@
 	}
 	
 }
+
 .portfolio-item {
 	width: 100%;
 	max-width: 400px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 	.portfolio-item__img {
+		display: flex;
+		justify-content: center;
 		height: 290px;
 		overflow: hidden;
 		margin-bottom:10px;
@@ -81,8 +88,8 @@
 .portfolio-slider .swiper-arrows{
 	.swiper-button-next,
 	.swiper-button-prev {
-		background-color: rgba(255, 255, 255, .7);
-		&:after{font-size: 24px;}
+		background-color: rgba(255, 255, 255, .9);
+		&:after{font-size: 34px;}
 	}
 	.swiper-button-prev {
 		left: 9%;

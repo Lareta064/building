@@ -40,7 +40,26 @@
 		font-size: 14px;
 		line-height: 18px;
 		& +p{
-			margin-top: 1em;
+			margin-top: .7em;
+		}
+	}
+}
+.information-block__text.text-18 p{
+	font-size: 18px;
+	line-height: 1.5;
+	@media(max-width:1023px) {
+		font-size: 14px;
+	}
+}
+.information-block__content.flex-start{
+	align-items: flex-start;
+}
+.single-news-info,
+.information-block--service{
+	.section-title{
+		margin-bottom: 35px;
+		@media(max-width:1023px) {
+			margin-bottom: 25px;
 		}
 	}
 }

@@ -14,3 +14,24 @@
 				
 				.form-item.flex-end
 					button.btn.text-upper(type="submit") Отправить
+
+//======== modal Заказать расчет ============
+.modal-frame(frame-modal="order_calculation")
+	.modal-frame-content
+		.form-wrapper
+			.modal-frame-close(frame-close)
+				span +
+			.modal-frame-title.text-center
+				.title-color Заявка на расчет
+				p.text-center Заполните и отправьте форму для связи
+			
+			form.form-send-message.w-100
+				.form-item
+					input.phone(type="text" name="name" placeholder="Имя")
+				.form-item
+					input.phone(type="text" name="email" placeholder="E-mail")
+				.form-item
+					input.phone(type="text" name="phone" placeholder="Номер телефона")
+				
+				.form-item.flex-end
+					button.btn.text-upper(type="submit") Отправить
